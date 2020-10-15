@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+
+  <body>
+
+    <section>
+      <div class="container">
+        <div id="itemInfo" class="wrapper">
+
+<!-- ======================================================First Row======================================================== -->
+          <div id="firstRaw" class="first-row">
+            <div class="row">
+
+              <div class="col-md-6 d-flex align-items-center">
+                <img src="images/product-1.png" alt="" height="135px" width="115px"/>
+                <h4 class="p-4">iPhone 11 128GB Black</h4>
+              </div>
+
+
+              <div class="col-md-6 d-flex align-items-center justify-content-around">
+
+                <div>
+                    <div class="input-group plus-minus-input align-items-center">
+
+                        <div class="input-group-button">
+                          <button type="button" onclick="phoneInput('phone', 'finalPhone', false)" id="phoneDecrease" class="button btn btn-default" data-quantity="minus" data-field="quantity">
+                              <i class="fa fa-minus minus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+
+                        <input type="text" id="phoneCount" value="1" class="quantity-field text-center form-control">
+
+                        <div class="input-group-button">
+                          <button type="text" onclick="phoneInput('phone', 'finalPhone', true)" id="phoneIncrease" class="button btn btn-default" data-quantity="plus" data-field="quantity">
+                            <i class="fa fa-plus plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                </div>
+
+                <div>
+                  <h4>$ <span id="phoneTotal">1219</span></h4>
+                </div>
+
+                <div>
+                  <img id="phoneRemove" src="images/remove.png" style="cursor: pointer;" alt="" height="20px" width="20px"/>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+<!-- ============================================================================================================== -->
+
+          <br />
+
+<!-- ======================================================Second Row============================================== -->
+          <div id="secondRaw" class="second-row">
+            <div class="row">
+
+              <div class="col-md-6 d-flex align-items-center">
+                <img src="images/product-2.png" alt="" height="135px" width="115px"/>
+                <h4 class="p-4">iPhone 11 Silicone Case - Black</h4>
+              </div>
+
+
+            <div class="col-md-6 d-flex align-items-center justify-content-around">
+
+                <div>
+                    <div class="input-group plus-minus-input align-items-center">
+
+                        <div class="input-group-button">
+                          <button type="text" onclick="phoneInput('case', 'finalCase', false)" id="caseDecrease" class="button btn btn-default" data-quantity="minus" data-field="quantity">
+                              <i class="fa fa-minus minus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+
+                        <input type="text" id="caseCount" value="1" class="quantity-field text-center form-control">
+
+                        <div class="input-group-button">
+                          <button type="button" onclick="phoneInput('case', 'finalCase', true)" id="caseIncrease" class="button btn btn-default" data-quantity="plus" data-field="quantity">
+                            <i class="fa fa-plus plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                </div>
+
+                <div>
+                  <h4>$ <span id="caseTotal">59</span></h4>
+                </div>
+
+                <div>
+                  <img id="caseRemove" src="images/remove.png" style="cursor: pointer;" alt="" height="20px" width="20px"/>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+<!-- ============================================================================================================== -->
+
+          <br />
+
+<!-- ======================================================Third Row=============================================== -->
+          <div class="third-row">
+            <div class="pl-5">
+              <div class="row">
+                <div class="col-md-10">
+                  <h4>Shopping cart :</h4>
+                  <h4>Tax (5% of Shopping Cart) :</h4>
+                  <h4>Total :</h4>
+                </div>
+                <div class="col-md-2">
+                  <h4>$ <span id="shoppingCart">1,278</span></h4>
+                  <h4>$ <span id="tax">64</span></h4>
+                  <h4>$ <span id="grandTotal">1,342</span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+          <!-- ======================Check Out Area======================== -->
+
+              <button id="checkOut" class="btn btn-success float-right button">Check Out</button>
+
+        </div>
+      </div>
+    </section>
+<!-- ============================================================================================= -->
+
+
+
+<!-- ================================Delivery Details============================================= -->
+
+    <section>
+      <div class="container">
+        <div id="delivery" class="wrapper2">
+          <div class="delivery">
+
+            <h2>Fill Delevery Details</h2>
+            <br>
+
+            <div class="name">
+              <h5>Name</h5>
+              <input id="nameInfo" oninput="addDetails('nameInfo')" type="text" placeholder="Enter Your Fullname" class="form-control">
+            </div>
+
+            <br>
+
+            <div class="email">
+              <h5>Email</h5>
+              <input id="emailInfo" oninput="addDetails('emailInfo')" placeholder="Enter Your Email Address" class="form-control">
+            </div>
+
+            <br>
+
+            <div class="phoneNumber">
+              <h5>Phone Number</h5>
+              <input id="phoneNumberInfo" oninput="addDetails('phoneNumberInfo')" type="text" placeholder="Enter Your Phone Number" class="form-control">
+            </div>
+
+            <br>
+
+            <div class="presentAddress">
+              <h5>Present Address</h5>
+              <input id="presentAddressInfo" oninput="addDetails('presentAddressInfo')" type="text" placeholder="Enter Your Address" class="form-control">
+            </div>
+
+            <br>
+
+            <div>
+              <button id="orderConfirmed" class="btn btn-success button float-right">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ====================================================================================== -->
+
+
+
+<!-- =================================== Order Details====================================== -->
+
+    <section>
+      <div class="container">
+        <div id="confirm" class="wrapper3">
+          <div class="orderText text-center">
+            <h1 class="text-success">Your Order is Confirmed</h1>
+            <h5 class="text-info">Order Details</h5>
+          </div>
+  
+          <hr><br>
+  
+          <div class="orderDetails">
+                <h5>Customer Name : <span id="customerName" class="text-info"></span></h5>
+                <h5>Customer Email : <span id="customerEmail" class="text-info"></span></h5>
+                <h5>Customer Contact No : <span id="customerPhoneNumber" class="text-info"></span></h5>
+                <h5>Delivery Address : <span id="customerDeliveryAddress" class="text-info"></span></h5>
+          </div>
+  
+          <br><br>
+  
+          <div class="table">
+            <h5 class="order">Order Summery</h5>
+            <table>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+  
+              <tr>
+                <td>iphone 11 128GB Black</td>
+                <td>$ 1,219</td>
+                <td><span id="finalPhoneCount">1</span></td>
+                <td>$ <span id="finalPhoneTotal">1,219</span></td>
+              </tr>
+  
+              <tr>
+                <td>iphone 11 Silicone Case - Black</td>
+                <td>$ 59</td>
+                <td><span id="finalCaseCount">1</span></td>
+                <td>$ <span id="finalCaseTotal">59</span></td>
+              </tr>
+  
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="font-weight-bold">Subtotal</td>
+                <td>$ <span id="subTotal">1,278</span></td>
+              </tr>
+  
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="font-weight-bold">Tax (5% of Subtotal)</td>
+                <td>$ <span id="finalTax">64</span></td>
+              </tr>
+  
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="font-weight-bold">Total</td>
+                <td>$ <span id="finalTotal">1,342</span></td>
+              </tr>
+            </table>
+          </div>
+
+
+          <div>
+            <button id="finalConfirm" class="btn btn-success button float-right">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="container">
+        <div id="finalStatus" class="text-center wrapper4">
+          <h1 class="text-light bg-dark">Hi <span id="customerFinalName"></span>,</h1>
+          <h3 class="font-weight-normal text-success">Thank you for purchasing our product.Your support and trust in us are much appreciated.</h3>
+          <br>
+          <img src="images/smile.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

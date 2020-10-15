@@ -1,0 +1,128 @@
+body{
+    background-color: #FFFFFF;
+    padding: 50px;
+    margin: 50px;
+}
+
+.wrapper{
+    background-color: #F6F5FA;
+    border: none;
+    padding: 70px;
+    /* display: none; */
+}
+
+.first-row, .second-row, .third-row{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.input-group .quantity-field{
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 10px !important;
+    background-color: #F6F5FA;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #444446;
+    margin: 5px;
+}
+
+.input-group .input-group-button .button{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    width: 40px;
+}
+
+.input-group .input-group-button .button .plus{
+    color: green;
+}
+
+.input-group .input-group-button .button .minus{
+    color: red;
+}
+
+.button{
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    margin-top: -15px;
+    padding: 5px 30px;
+}
+
+
+
+
+
+
+/* Delivery Details */
+.wrapper2{
+    border: none;
+    background-color: #F6F5FA;
+    padding: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    display: none;
+}
+
+.name, .email, .phoneNumber, .presentAddress{
+    font-weight: lighter;
+    color: #444446;
+}
+/* ============================================ */
+
+
+
+
+
+
+
+/* Order Details */
+
+table{
+    width: 100%;
+    border: 1px solid #dbdbdf;
+}
+
+.order{
+    background-color: #dbdbdf;
+    padding: 10px;
+}
+
+th{
+    background-color: #f2f2f2;
+}
+
+th td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr{
+    background-color: white;
+}
+
+.wrapper3{
+    border: none;
+    background-color: #F6F5FA;
+    padding: 50px;
+    margin: -20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.orderDetails h5{
+    padding: 5px;
+}
+
+
+
+
+
+.wrapper4{
+    display: none;
+}
