@@ -1,0 +1,97 @@
+body{
+    margin: 0 auto;
+    padding: 3% 10%;
+}
+
+.phn-group{
+    background: #F6F5FA;
+    border-radius: 10px;
+    padding: 70px;
+    /* display: none; */
+}
+
+.phone{
+    width: 115px;
+    height: auto;
+}
+
+.button img{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.button input{
+    border: none;
+    text-align: center;
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 5px;
+    pointer-events: none;
+}
+.remove-button img{
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+}
+.price{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.phn-price{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.button{
+    width: 20vh;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+.delivary-details{
+    background: #F6F5FA;
+    border-radius: 10px;
+    padding: 70px;
+    display: none;
+}
+
+
+.order-confirm{
+    background: #F6F5FA;
+    border-radius: 10px;
+    padding: 70px;
+    display: none;
+}
+.order-confirm h1{
+    color: #28A745;
+}
+
+
+table{
+    border: 1px solid #dbdbdf;;
+}
+tbody .head{
+    background: #f2f2f2;
+}
+tbody{
+    background: white;
+}
+table tr th{
+    padding: 10px;
+}
+.order-bg{
+    background: #DBDBDF;
+    padding: 10px;
+}
+
+.final-status{
+    display: none;
+}

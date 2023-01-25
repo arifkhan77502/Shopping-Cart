@@ -1,0 +1,243 @@
+/* Shopping Part */
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 320.99px) {
+    body{
+        padding: 15px;
+    }
+    .phn-group h4{
+        text-align: center;
+        font-size:large;
+    }
+    .quantity-price{
+        padding: 0px;
+    }
+    .quantity-price img, .remove-button img{
+        width: 25px;
+        height: auto;
+    }
+    .phone{
+        width: 50%;
+        height: auto;
+        position: relative;
+        left: 25%;
+    }
+    .phn-price{
+        padding: 20px;
+    }
+    .phn-price-02 h4{
+
+        text-align: start;
+    }
+    .phn-group{
+        padding: 20px;
+    }
+
+}
+
+
+
+@media (min-width: 321px) and (max-width: 425.99px) {
+    body{
+        padding: 15px;
+    }
+    .phn-group h4{
+        text-align: center;
+        font-size:large;
+    }
+    .quantity-price{
+        padding: 15px;
+    }
+    .quantity-price img, .remove-button img{
+        width: 25px;
+        height: auto;
+    }
+    .phone{
+        width: 50%;
+        height: auto;
+        position: relative;
+        left: 25%;
+    }
+    .phn-price{
+        padding: 20px;
+    }
+    .phn-price-02 h4{
+
+        text-align: start;
+    }
+    .phn-group{
+        padding: 20px;
+    }
+
+}
+
+
+@media (min-width: 426px) and (max-width: 445.99px) {
+    body{
+        padding: 15px;
+    }
+    .phn-group h4{
+        text-align: center;
+        font-size: x-large;
+    }
+    .quantity-price{
+        padding: 15px;
+    }
+    .quantity-price img, .remove-button img{
+        width: 30px;
+        height: auto;
+    }
+    .phone{
+        width: 60%;
+        height: auto;
+        position: relative;
+        left: 25%;
+    }
+    .phn-price{
+        padding: 20px;
+    }
+    .phn-price-02 h4{
+
+        text-align: start;
+    }
+    .phn-group{
+        padding: 20px;
+    }
+
+}
+
+
+@media (min-width: 446px) and (max-width: 767.99px) {
+    body{
+        padding: 15px;
+    }
+    .phn-group h4{
+        text-align: center;
+        font-size: x-large;
+    }
+    .quantity-price{
+        padding: 15px 50px;
+    }
+    .quantity-price img, .remove-button img{
+        width: 30px;
+        height: auto;
+    }
+    .phone{
+        width: 60%;
+        height: auto;
+        position: relative;
+        left: 25%;
+    }
+    .phn-price{
+        padding: 20px;
+    }
+    .phn-price-02 h4{
+
+        text-align: start;
+    }
+    .phn-group{
+        padding: 20px;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 768px) and (max-width: 1399.98px) {
+    body{
+        padding: 20px;
+    }
+    .phn-group h4{
+        text-align: start;
+        font-size:20px;
+    }
+    .quantity-price{
+        padding: 0px;
+    }
+    .quantity-price img, .remove-button img{
+        width: 30px;
+        height: auto;
+    }
+    .phone{
+        padding-right: 20px;
+        width: 15vh;
+        height: auto;
+    }
+    .price h4{
+        text-align: center;
+    }
+    .phn-price{
+        padding: 50px;
+        height: 30vh;
+    }
+    .phn-price-02 h4{
+        text-align: start;
+    }
+    .phn-group{
+        padding: 50px;
+    }
+}
+
+/*=========== Delivary Details ==========*/
+@media (max-width: 424.99px) {
+    .delivary-details{
+        padding: 20px;
+    }
+}
+
+
+/*=========== Order Confirm ==========*/
+@media (max-width: 424.99px) {
+    .order-confirm{
+        padding: 0px;
+    }
+    .order-confirm h1{
+        font-size: large;
+        padding-top: 4vh;
+    }
+    .order-confirm h5{
+        font-size: small;
+    }
+    .order-wrapper{
+        padding: 0px;
+    }
+    .order-confirm td{
+        text-align: center;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767.99px) {
+    .order-confirm{
+        padding: 15px;
+    }
+    .order-confirm h1{
+        font-size: xx-large;
+        padding-top: 4vh;
+    }
+    .order-confirm h5{
+        font-size: large;
+    }
+    .order-wrapper{
+        padding: 0px;
+    }
+    .order-confirm td{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) { ... } */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) { ... } */
+
+/* X-Large devices (large desktops, less than 1400px) */
+/* @media (max-width: 1399.98px) { ... } */

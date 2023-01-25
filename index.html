@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+        <title>Shopping Cart</title>
+    </head>
+    <body>
+
+
+        <div
+            class="container">
+            <!------------ Shopping Part ------------>
+            <div
+                class="phn-group" id="shopping">
+
+                <!------------ Product - 01 ------------>
+                <div class="phn-price" id="phoneRemove">
+                    <div class="row d-flex justify-content-around align-items-center">
+                        <div class="col-md-2 phone-wrapper">
+                            <img class="phone" src="images/product-1.png" alt="">
+                        </div>
+
+                        <div class="col-md-5">
+                            <h4>iPhone 11 128GB Black</h4>
+                        </div>
+
+                        <div class="col-md-5 d-flex justify-content-between align-items-center quantity-price">
+                            <div class="button d-flex justify-content-center align-items-center">
+                                <img onclick="phoneInput('phone', true, 'finalPhone')" src="https://img.icons8.com/flat-round/50/000000/plus.png"/>
+
+                                <input id="phoneCount" type="button" value="1">
+
+                                <img onclick="phoneInput('phone', false, 'finalPhone')" src="https://img.icons8.com/flat-round/50/000000/minus.png"/>
+                            </div>
+
+                            <div class="price">
+                                <h4 class="mb-0">$
+                                    <span id="phoneTotal">1219</span>
+                                </h4>
+                            </div>
+
+                            <div class="remove-button d-flex justify-content-center align-items-center">
+                                <img onclick="remove('phone')" src="https://img.icons8.com/emoji/50/000000/cross-mark-emoji.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!------------ Product - 02 ------------>
+                <div class="phn-price" id="caseRemove">
+                    <div class="row d-flex justify-content-around align-items-center">
+                        <div class="col-md-2 phone-wrapper">
+                            <img class="phone" src="images/product-2.png" alt="">
+                        </div>
+
+                        <div class="col-md-5">
+                            <h4>iPhone 11 Silicone Case - Black</h4>
+                        </div>
+
+                        <div class="col-md-5 d-flex justify-content-between align-items-center quantity-price">
+                            <div class="button d-flex justify-content-center align-items-center">
+                                <img onclick="phoneInput('case', true, 'finalCase')" src="https://img.icons8.com/flat-round/50/000000/plus.png"/>
+
+                                <input id="caseCount" type="button" value="1">
+
+                                <img onclick="phoneInput('case', false, 'finalCase')" src="https://img.icons8.com/flat-round/50/000000/minus.png"/>
+                            </div>
+
+                            <div class="price">
+                                <h4 class="mb-0">$
+                                    <span id="caseTotal">59</span>
+                                </h4>
+                            </div>
+
+                            <div class="remove-button d-flex justify-content-center align-items-center">
+                                <img onclick="remove('case')" src="https://img.icons8.com/emoji/50/000000/cross-mark-emoji.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!------------ Price Details ------------>
+
+                <div class="phn-price phn-price-02">
+                    <div class="row d-flex align-items-center">
+                        <div class="col">
+                            <h4>Shopping-Cart :
+                            </h4>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <h4>$
+                                <span id="shoppingCart">1278</span>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex align-items-center">
+                        <div class="col">
+                            <h4>Tax (5% of Shopping Cart) :
+                            </h3>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <h4>$
+                                <span id="tax">64</span>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="row d-flex align-items-center">
+                        <div class="col">
+                            <h4>Total :
+                            </h3>
+                        </div>
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <h4>$
+                                <span id="total">1342</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!------------ Check Out ------------>
+                <div class="row">
+                    <div class="col d-flex justify-content-end align-items-center">
+                        <button id="checkOutButton" class="btn btn-success button">Check Out</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------ Fill Delevery Details Part ------------>
+
+            <div class="delivary-details" id="delivery">
+                <h2>Fill Delivery Details</h2>
+
+                <br>
+
+                <h5>Name</h5>
+                <input id="name" type="text" class="form-control" placeholder="Enter Your Fullname">
+
+                <br>
+
+                <h5>Email</h5>
+                <input id="email" type="text" class="form-control" placeholder="Enter Your Email Address">
+
+                <br>
+
+                <h5>Phone Number</h5>
+                <input id="phoneNumber" type="text" class="form-control" placeholder="Enter Your Phone Number">
+
+                <br>
+
+                <h5>Present Address</h5>
+                <input id="address" type="text" class="form-control" placeholder="Enter Your Address">
+
+                <br>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-end align-items-center">
+                        <button id="submitButton" class="btn btn-success button">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------ Order Confirmation Part ------------>
+            <div class="container order-wrapper">
+                <div class="order-confirm" id="confirmation">
+                    <h1 class="text-center">Your Order is Confirmed</h1>
+                    <h5 class="text-info text-center">Order Details</h5>
+
+                    <br>
+                    <hr>
+
+                    <div class="order-details p-2">
+                        <h5>Customer Name :
+                            <span id="customerName" class="text-info"></span>
+                        </h5>
+                        <h5>Customer Email :
+                            <span id="customerEmail" class="text-info"></span>
+                        </h5>
+                        <h5>Customer Contact No :
+                            <span id="contactNumber" class="text-info"></spa>
+                        </h5>
+                        <h5>Delivery Address :
+                            <span id="deliveryAddress" class="text-info"></span>
+                        </h5>
+                    </div>
+
+                    <br>
+
+                    <table class="table table-bordered">
+                        <h5 class="order-bg">Order Summery</h5>
+                        <tbody>
+                            <tr class="head">
+                                <th scope="col">Item</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                            <tr>
+                                <td scope="row">iphone 11 128GB Black</td>
+                                <td>$
+                                    <span>1,219</span>
+                                </td>
+                                <td>
+                                    <span id="finalPhoneCount">1</span>
+                                </td>
+                                <td>$
+                                    <span id="finalPhoneTotal">1,219</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">iphone 11 Silicone Case - Black</td>
+                                <td>$
+                                    <span>59</span>
+                                </td>
+                                <td>
+                                    <span id="finalCaseCount">1</span>
+                                </td>
+                                <td>$
+                                    <span id="finalCaseTotal">59</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <th scope="row">Subtotal</th>
+                                <td>$
+                                    <span id="subTotal">1,278</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <th scope="row">Tax (5% of Subtotal)</th>
+                                <td>$
+                                    <span id="finalTax">64</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <th scope="row">Total</th>
+                                <td>$
+                                    <span id="grandTotal">1,342</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <button id="confirmButton" class="btn btn-success button">Confirm</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Final Status -->
+            <div id="finalStatus" class="text-center final-status">
+                <h1 class="text-primary bg-dark">Hi ,
+                    <span id="customerFinalName"></span>
+                </h1>
+                <h3 class="font-weight-normal text-success">Thank you for purchasing our product.Your support and trust in us
+                                are much appreciated.</h3>
+                <br>
+                <img src="images/smile.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+    </body>
+</html>
