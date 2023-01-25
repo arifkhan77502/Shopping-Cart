@@ -94,4 +94,6 @@ table tr th{
 
 .final-status{
     display: none;
+    margin: 0 auto;
+    width: auto;
 }
